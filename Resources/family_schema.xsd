@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://www.example.org/family_schema"
+	xmlns:tns="http://www.example.org/family_schema"
+	elementFormDefault="qualified">
+
+	<xs:element name="families">	
+		<xs:complexType>		
+			<xs:sequence>			
+				<xs:element name="family" maxOccurs="unbounded" minOccurs="1" type="tns:family_type"/>			
+			</xs:sequence>		
+		</xs:complexType>	
+	</xs:element>
+	
+	
+	<xs:complexType name="family_type">	
+		<xs:sequence>		
+			<xs:element name="mother" type="tns:mother_type" maxOccurs="unbounded"/>
+			<xs:element name="father" type="tns:father_type" />
+  			<xs:element name="children" type="tns:children_type" />
+		</xs:sequence>
+		<xs:attribute name="adress" type="xs:string" />	
+	</xs:complexType>
+
+	
+	<xs:complexType name="mother_type">
+		<xs:sequence>
+			<xs:element name="name" type="xs:string" />
+			<xs:element name="surname" type="xs:string" />
+			<xs:element name="maiden-name" type="xs:string" />
+			<xs:element name="age" type="xs:int" />
+			<xs:element name="hobby" type="tns:hobby_type" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="father_type">
+		<xs:sequence>
+			<xs:element name="name" type="xs:string" />
+			<xs:element name="surname" type="xs:string" />
+			<xs:element name="age" type="xs:int" />
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="hobby_type">
+		<xs:sequence>
+			<xs:element name="title" type="xs:string" />
+			<xs:element name="timesper-week" type="xs:string" />
+			<xs:element name="shedule" type="tns:shedule_type" />
+		</xs:sequence>		
+	</xs:complexType>
+	
+	<xs:complexType name="shedule_type">
+		<xs:sequence>
+			<xs:element name="day" type="xs:string" />
+			<xs:element name="time" type="xs:string" />
+			<xs:element name="day" type="xs:string" />
+			<xs:element name="time" type="xs:string" />
+		</xs:sequence>		
+	</xs:complexType>
+	
+	<xs:complexType name="children_type">
+		<xs:sequence>
+			<xs:element name="child"  maxOccurs="unbounded" minOccurs="1" type="tns:child_type" />
+		</xs:sequence>		
+	</xs:complexType>
+	
+	<xs:complexType name="child_type">
+		<xs:sequence>
+			<xs:element name="name" type="xs:string" />
+			<xs:element name="surname" type="xs:string" />
+			<xs:element name="age" type="xs:int" />
+			<xs:element name="gender" type="xs:string" />
+		</xs:sequence>		
+	</xs:complexType>
+
+
+</xs:schema>

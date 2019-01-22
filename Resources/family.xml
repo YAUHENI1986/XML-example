@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<families xmlns="http://www.example.org/family_schema"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.example.org/family_schema family_schema.xsd">
+
+	<family adress="CIS, Balarus, Minsk, N186">
+	
+		<mother>
+			<name>Kate</name>
+			<surname>Petrova</surname>
+			<maiden-name>Ivanova</maiden-name>
+			<age>31</age>
+			<hobby>
+				<title>Dancing</title>
+				<timesper-week>2</timesper-week>
+				<shedule>
+					<day>monday</day>
+					<time>18:00</time>
+					<day>friday</day>
+					<time>18:01</time>
+				</shedule>
+			</hobby>
+		</mother>
+
+		<father>
+			<name>Igor</name>
+			<surname>Ivanov</surname>
+			<age>32</age>
+		</father>
+		
+		<children>
+			<child>
+				<name>Kolay</name>
+				<surname>Ivanov</surname>
+				<age>10</age>
+				<gender>mail</gender>
+			</child>
+			<child>
+				<name>Olga</name>
+				<surname>Ivanova</surname>
+				<age>1</age>
+				<gender>femail</gender>
+			</child>			
+		</children>
+		
+		
+	</family>
+	
+	<family adress="CIS, USA, NYC, N200">
+	
+		<mother>
+			<name>Lola</name>
+			<surname>Tut</surname>
+			<maiden-name>Pops</maiden-name>
+			<age>20</age>
+		</mother>
+
+		<father>
+			<name>Mikl</name>
+			<surname>Rebus</surname>
+			<age>20</age>
+		</father>
+		
+		<children>
+			<child>
+				<name>Rembo</name>
+				<surname>Rebusov</surname>
+				<age>5</age>
+				<gender>mail</gender>
+			</child>
+			<child>
+				<name>Polina</name>
+				<surname>Rebusovna</surname>
+				<age>6</age>
+				<gender>femail</gender>
+			</child>			
+		</children>
+ 		
+	</family>
+
+
+
+</families>
+
+
+
+
+
+
